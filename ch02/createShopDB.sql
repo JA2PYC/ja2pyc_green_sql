@@ -33,4 +33,20 @@ INSERT INTO shop_db.member (member_id, member_name, member_addr) VALUES ('carry'
 UPDATE `shop_db`.`member` SET `member_addr` = '미국 뉴욕 헌팅턴' WHERE (`member_id` = 'carry');
 DELETE FROM `shop_db`.`member` WHERE (`member_id` = 'carry');
 
+-- Select From
 SELECT * FROM member LIMIT 100;
+SELECT member_id, member_name FROM member WHERE member_name = '아이유';
+
+-- Drop Table (Don't Use)
+DROP TABLE member;
+
+-- Create Table
+CREATE TABLE buy (
+	num INT AUTO_INCREMENT PRIMARY KEY,
+    mem_id CHAR(8) NOT NULL,
+    prod_name CHAR(6) NOT NULL,
+    group_name CHAR(4) NULL,
+    price INT UNSIGNED NOT NULL,
+    aount SMALLINT UNSIGNED NOT NULL,
+    FOREIGN KEY (mem_id) REFERENCES member(member_id)
+);
