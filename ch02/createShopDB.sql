@@ -1,7 +1,13 @@
+-- Create Database
 CREATE DATABASE shop_db;
 
+-- Show Database List
+SHOW DATABASES;
+
+-- Use Database
 USE shop_db;
 
+-- Create Table
 CREATE TABLE member (
 	member_id CHAR(8) NOT NULL PRIMARY KEY,
     member_name CHAR(5) NOT NULL,
@@ -15,6 +21,8 @@ CREATE TABLE product  (
     company CHAR(5),
     amount INT NOT NULL
 );
+
+DESCRIBE member;
 
 INSERT INTO member (member_id, member_name, member_addr) VALUES ('tess', '나훈아','경기도 부천시 중동');
 INSERT INTO shop_db.member (member_id, member_name, member_addr) VALUES ('hero', '임영웅', '서울 은평구 증산동');
@@ -36,17 +44,3 @@ DELETE FROM `shop_db`.`member` WHERE (`member_id` = 'carry');
 -- Select From
 SELECT * FROM member LIMIT 100;
 SELECT member_id, member_name FROM member WHERE member_name = '아이유';
-
--- Drop Table (Don't Use)
-DROP TABLE member;
-
--- Create Table
-CREATE TABLE buy (
-	num INT AUTO_INCREMENT PRIMARY KEY,
-    mem_id CHAR(8) NOT NULL,
-    prod_name CHAR(6) NOT NULL,
-    group_name CHAR(4) NULL,
-    price INT UNSIGNED NOT NULL,
-    aount SMALLINT UNSIGNED NOT NULL,
-    FOREIGN KEY (mem_id) REFERENCES member(member_id)
-);
