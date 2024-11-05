@@ -24,6 +24,7 @@ CREATE TABLE ja_meta (
 
 DESCRIBE ja2pyc.ja_meta;
 
+-- ALTER TABLE MODIFY
 ALTER TABLE ja_meta MODIFY ja_created_time DATETIME NOT NULL DEFAULT NOW();
 ALTER TABLE ja_meta MODIFY ja_modified_time DATETIME NOT NULL DEFAULT NOW();
 
