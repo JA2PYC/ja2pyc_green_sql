@@ -89,3 +89,61 @@ SELECT * FROM example.emp WHERE ename LIKE '%s%';
 
 -- Quiz 9
 SELECT * FROM example.emp WHERE ename LIKE 'S___T';
+
+-- Quiz 10
+SELECT * FROM example.emp WHERE ename LIKE '_A%';
+
+-- Quiz 11
+SELECT * FROM example.emp ORDER BY sal DESC;
+
+-- Quiz 12
+SELECT empno, ename, deptno FROM example.emp WHERE ename LIKE 'K%' OR deptno = 30;
+
+-- Quiz 13
+SELECT * FROM example.emp WHERE sal >= 1500 AND deptno = 30 AND job = 'MANAGER';
+
+-- Quiz 14
+SELECT * FROM example.emp WHERE empno BETWEEN 7654 AND 7782;
+
+-- Quiz 15
+SELECT * FROM example.emp WHERE ename BETWEEN 'B' AND 'J';
+
+ -- Quiz 16
+ SELECT * FROM example.emp WHERE hiredate < '19810101' OR hiredate > 19811231;
+ 
+ -- Quiz 17
+ SELECT * FROM example.emp WHERE job = 'MANAGER' OR job = 'SALESMAN';
+ 
+ -- Quiz 18
+ SELECT ename, empno, deptno FROM example.emp WHERE deptno NOT IN (20, 30);
+ 
+ -- Quiz 19
+ SELECT empno, ename, hiredate, deptno FROM example.emp WHERE ename LIKE 'S%';
+ 
+ -- Quiz 20
+ SELECT * FROM example.emp WHERE hiredate LIKE ('1981%');
+ 
+ -- Quiz 21
+ SELECT * FROM example.emp WHERE ename LIKE ('%s%');
+ 
+ -- Quiz 22
+ SELECT * FROM example.emp WHERE ename LIKE ('S___T');
+ 
+ -- Quiz 23
+ SELECT * FROM example.emp WHERE ename LIKE ('_A%');
+ 
+ -- Quiz 24
+ SELECT * FROM example.emp WHERE comm IS NULL;
+ 
+ -- Quiz 25
+ SELECT * FROM example.emp WHERE comm IS NOT NULL;
+ 
+ -- Quiz 26
+ SELECT ename, deptno, sal FROM example.emp WHERE deptno = 30 AND sal >= 1500;
+ 
+ -- Quiz 27
+ SELECT empno, ename, deptno FROM example.emp WHERE ename LIKE 'K%' OR deptno = 30;
+ 
+ -- Quiz 28
+ SELECT * FROM example.emp WHERE sal >= 1500 AND deptno = 30 AND job = 'MANAGER';
+ 
