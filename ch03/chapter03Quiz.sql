@@ -103,7 +103,7 @@ SELECT empno, ename, deptno FROM example.emp WHERE ename LIKE 'K%' OR deptno = 3
 SELECT * FROM example.emp WHERE sal >= 1500 AND deptno = 30 AND job = 'MANAGER';
 
 -- Quiz 14
-SELECT * FROM example.emp WHERE empno BETWEEN 7654 AND 7782;
+SELECT * FROM example.emp WHERE empno NOT BETWEEN 7654 AND 7782;
 
 -- Quiz 15
 SELECT * FROM example.emp WHERE ename BETWEEN 'B' AND 'J';
