@@ -30,3 +30,4 @@ DROP TABLE ja2pyc_jsp.study_member;
 DROP TABLE ja2pyc_jsp.study_post;
 
 SELECT * FROM ja2pyc_jsp.study_member LIMIT 100;
+SELECT * FROM ja2pyc_jsp.study_post LIMIT 100;
